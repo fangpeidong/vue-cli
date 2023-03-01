@@ -6,6 +6,8 @@ const { DefinePlugin } = require('webpack');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
+  mode: 'development',
+  devtool: 'cheap-module-source-map',
   entry: './src/main.js',
   output: {
     path: undefined,
@@ -100,8 +102,6 @@ module.exports = {
       __VUE_PROD_DEVTOOLS__: 'false',
     }),
   ],
-  mode: 'development',
-  devtool: 'cheap-module-source-map',
   optimization: {
     splitChunks: {
       chunks: 'all',
